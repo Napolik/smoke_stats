@@ -1,0 +1,13 @@
+.main {
+    display: flex;
+}
+
+.sidebar {
+    width: 15%;
+    background: #ececec;
+}
+
+.content {
+    padding: 50px;
+    width: 60%;
+}

@@ -1,0 +1,9 @@
+.sidebar ul li {
+    list-style-type: none;
+}
+
+.sidebar a {
+    color: rgba(0, 0, 0, 0.795);
+    font-weight: bold;
+    font-size: 21px;
+}
