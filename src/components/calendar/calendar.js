@@ -14,13 +14,11 @@ export default class Calendar extends Component {
     render() {
         return (
             <div> Select date: 
-        <input 
-                className="calendar" 
-                type="date" 
-                >
-        </input>
-                
-                </div>
+                <input 
+                    className="calendar" 
+                    type="date" 
+                />
+            </div>
         );
     };
 };
