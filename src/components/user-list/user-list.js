@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom'
 import axios from "axios";
+import './user-list.css';
 
 export default class UserList extends Component {
   constructor(props) {
@@ -17,7 +18,8 @@ export default class UserList extends Component {
       const resp = await axios.get(
         "https://2nnpsk9po1.execute-api.us-east-1.amazonaws.com/dev/users/"
       );
-      this.setState({ my_data: resp.data });
+      let uniqueArray = resp.data.filter((v,i,a)=>a.findIndex(t=>(t.id === v.id))===i);
+      this.setState({ my_data: uniqueArray });
     } catch (err) {
       console.error(err);
     }
@@ -34,8 +36,8 @@ export default class UserList extends Component {
         <div className="">
           {this.state.my_data.map((item, index) => {
             return (
-              <div key={item.id}>
-                <Link to={"/times/" + item.id}>
+              <div className="user_item" key={item.id} >
+                <Link to={"/times/" + item.id} >
                   {item.first_name} {item.last_name}
                 </Link>
               </div>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
 const axios = require('axios');
 
-export default class LineChart extends Component {
+class LineChart extends Component {
   constructor(props) {
     super(props);
     this.state = {my_data: []};
@@ -15,8 +15,8 @@ export default class LineChart extends Component {
   GetTimes = async () => {  
     try {
         const resp = await axios.get('https://2nnpsk9po1.execute-api.us-east-1.amazonaws.com/dev/times/');
-              
-        function getTime(type) {
+  
+        function getTime(type, id) {
           let time = resp.data.filter(function (el) {
             return el.type === type;
           }).map(a => a.time);
@@ -46,6 +46,8 @@ export default class LineChart extends Component {
   
 
   render() {
+    
+
     const options = {
       scales: {
         yAxes: [
@@ -79,3 +81,5 @@ const data = {
   }
   
 };
+
+export default LineChart;

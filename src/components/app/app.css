@@ -2,14 +2,8 @@
     display: flex;
 }
 
-.sidebar {
-    width: 30%;
-    padding: 20px;
-    background: #ececec;
-}
-
 .content {
-    padding: 50px;
+    padding: 20px;
     width: 60%;
     display: flex;
 }

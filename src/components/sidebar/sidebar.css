@@ -1,6 +1,8 @@
 .sidebar{
     display: flex;
     flex-direction: column;
+    padding: 10px;
+    background: #ececec;
 }
 
 .sidebar ul li {
@@ -10,5 +12,4 @@
 .sidebar a {
     color: rgba(0, 0, 0, 0.795);
     font-weight: bold;
-    font-size: 21px;
 }
